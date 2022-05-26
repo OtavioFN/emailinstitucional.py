@@ -1,0 +1,11 @@
+from random import randint
+name = str(input('Digite seu nome completo: ')).lower().strip()
+name = name.replace(' das ', ' ').replace(' dos ', ' ').replace(' da ', ' ').replace(' de ', ' ').replace(' do ', ' ')
+splitted_name = name.split()
+ending = '@aluno.ifal.edu.br'
+number = str(randint(1, 20))
+initial = ''
+for n in splitted_name:
+  initial = initial + n[0]
+email = initial + number + ending
+print(email)
